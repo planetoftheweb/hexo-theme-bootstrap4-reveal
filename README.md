@@ -1,10 +1,10 @@
 # hexo-theme-bootstrap-blog
 
-A simple [Bootstrap] v3 blog theme for [Hexo].
+A simple [Bootstrap] v4 blog theme for [Hexo].
 
-Based on the [official Bootstrap Blog example template](http://getbootstrap.com/examples/blog/).
+Based on the [Hexo Bootstrap theme](https://github.com/cgmartin/hexo-theme-bootstrap-blog).
 
-[Demo site](http://cgmartin.github.io/hexo-theme-bootstrap-blog/) | [More Information](https://cgmartin.com/2016/01/05/bootstrap-blog-hexo-theme/)
+[Demo site](http://raybo.org/fid)
 
 ## Setup Instructions
 
@@ -15,19 +15,13 @@ Based on the [official Bootstrap Blog example template](http://getbootstrap.com/
 1) Install theme:
 
 ```bash
-$ git clone https://github.com/cgmartin/hexo-theme-bootstrap-blog.git themes/bootstrap-blog
+$ git clone https://github.com/planetoftheweb/hexo-theme-bootstrap4-reveal
 ```
 
-2) (optional) Install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) for more Bootstrap tags (textcolors, buttons, labels, badges, etc.):
+2) (optional) Install [hexo-processor-static](https://github.com/planetoftheweb/hexo-processor-static) to make copying of markdown slides work.
 
 ```bash
-$ npm install hexo-tag-bootstrap --save
-```
-
-3) (optional) Install [hexo-tag-fontawesome](https://github.com/akarzim/hexo-tag-fontawesome) for placing Font Awesome icons in your Markdown:
-
-```bash
-$ npm install hexo-tag-fontawesome --save
+$ npm install hexo-processor-static --save
 ```
 
 ### Enable
@@ -136,25 +130,6 @@ Usage:
 {% fancybox img_url [img_thumbnail] [img_caption] %}
 ```
 
-### Callouts
-
-A custom tag for the [Bootstrap "callout" style](http://cpratt.co/twitter-bootstrap-callout-css-styles/) is available for use.
-
-Usage:
-```
-{% callout [type:default|primary|success|info|warning|danger] %}
-...content...
-{% endcallout %}
-```
-
-Example:
-```
-{% callout info %}
-#### {% fa info-circle %} Info tip
-This is some callout content
-{% endcallout %}
-```
-
 ### Sidebar
 
 This theme provides 6 built-in widgets that can be displayed in the sidebar:
@@ -166,7 +141,7 @@ This theme provides 6 built-in widgets that can be displayed in the sidebar:
 - [archives](./layout/_widget/archives.ejs)
 - [recent_posts](./layout/_widget/recent_posts.ejs)
 
-All widgets are enabled and displayed by default. You can toggle them on/off with the `widgets` setting in the theme's [_config.yml](./config.yml).
+All widgets are enabled by default. You can toggle them on/off with the `widgets` setting in the theme's [_config.yml](./config.yml).
 
 \* **NOTE**: The "about" widget contains static Lorem Ipsum text by default. You'll want to edit the `about_widget_content` setting for your site or disable the widget in the [theme config](./config.yml). You can also modify the widget file itself to include contents from a Markdown page:
 ```html
@@ -189,19 +164,10 @@ A custom `bs_paginator()` helper is used to produce [Bootstrap-compatible pagina
     }) %>
 ```
 
-## Development
-
-The [default Landscape Hexo theme](https://github.com/hexojs/hexo-theme-landscape) was used as the starting point and heavily edited for this theme.
-
-The Landscape Stylus styles have been replaced with standard CSS files which override `bootstrap.min.css`. Stylus is used only for [bundling the CSS files](./source/css/styles.styl). Feel free to convert the CSS to your pre-processor of choice (Stylus, LESS, Sass, etc.).
-
 ## License
 
-[MIT License](http://cgm.mit-license.org/)
-
-Copyright © 2016 Christopher Martin
+[MIT](LICENSE)
 
 [Hexo]: http://zespia.tw/hexo/
 [Fancybox]: http://fancyapps.com/fancybox/
-[Font Awesome]: http://fontawesome.io/
 [Bootstrap]: http://getbootstrap.com/
