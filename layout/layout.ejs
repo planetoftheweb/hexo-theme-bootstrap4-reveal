@@ -1,0 +1,18 @@
+<%- partial('_partial/head') %>
+<body>
+  <%- partial('_partial/masthead') %>
+  <div class="container">
+    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+    <div class="row">
+        <main class="col-md-9 blog-main">
+          <%- body %>
+        </main>
+        <sidebar class="col-md-3 blog-sidebar">
+          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+        </sidebar>
+    </div>
+  </div>
+  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/inline-scripts') %>
+</body>
+</html>

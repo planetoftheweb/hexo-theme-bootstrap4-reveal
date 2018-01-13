@@ -1,0 +1,22 @@
+<header class="site-header"></header>
+
+<nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+  <div class="container">
+  <% if (theme.navbar_brand){ %>
+    <a class="navbar-brand d-none d-lg-block" href="<%- config.root %>"><%- theme.navbar_brand %></a>
+    <a class="navbar-brand d-lg-none" href="<%- config.root %>">FID</a>
+  <% } %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+      <div class="navbar-nav ml-auto">
+        <% for (var i in theme.menu){ %>
+          <a class="nav-item nav-link <%= is_current(theme.menu[i]) ? 'active' : '' %>"
+                href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        <% } %>
+      </div><!-- navbar-nav -->
+    </div><!-- collapse -->
+  </div><!-- container -->
+</nav><!-- nav -->
