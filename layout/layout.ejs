@@ -1,18 +1,54 @@
 <%- partial('_partial/head') %>
 <body>
-  <%- partial('_partial/masthead') %>
-  <div class="container">
-    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-    <div class="row">
-        <main class="col-md-9 blog-main">
-          <%- body %>
-        </main>
-        <sidebar class="col-md-3 blog-sidebar">
-          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
-        </sidebar>
-    </div>
-  </div>
-  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+
+  <% if (page.type == 'slides'){ %>
+
+    <body spellcheck="false">
+
+      <div class="reveal">
+        <div class="slides">
+          <section data-markdown="../slides/markdown/demo.md" data-separator="\n---\n" data-separator-notes="\n> >"></section>
+        </div><!-- slides -->
+    
+        <!-- ADD PERSISTENT NAVBAR CODE HERE -->
+        <footer class="footer fadein">
+          <div class="persistent">
+            <strong>Links:</strong> <a href="http://raybo.org/fid-slides">Slides</a>
+            | <a href="http://github.com/planetoftheweb/fid">Slides Repo</a>
+            | <a href="http://github.com/planetoftheweb/fid">Class Repo</a>
+            | <strong>Contact:</strong>
+            <a href="https://www.linkedin.com/in/planetoftheweb">LinkedIn</a>,
+            <a href="http://twitter.com/planetoftheweb">@planetoftheweb</a>,
+            <a href="http://github.com/planetoftheweb">Github</a>
+            | <a href="https://www.linkedin.com/learning/instructors/ray-villalobos">Courses</a>
+          </div>
+          <div class="small"><strong>&larr; &rarr;</strong>-navigate <strong>ctrl-t</strong>-toolbar <strong>ctrl-m</strong>-menu <strong>esc</strong>-overview</div>
+        </footer>
+        <!-- ADD PERSISTENT NAVBAR CODE HERE -->
+      </div><!-- reveal -->
+    
+
+  <% } else { %>
+
+    <%- partial('_partial/masthead') %>
+    <div class="container">
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+      <div class="row">
+          <main class="col-md-9 blog-main">
+            <%- body %>
+          </main>
+          <sidebar class="col-md-3 blog-sidebar">
+            <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+          </sidebar>
+      </div><!-- row -->
+    </div><!-- container -->
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  
+
+  <%  } %>
+
+
+
   <%- partial('_partial/inline-scripts') %>
 </body>
 </html>
