@@ -122,7 +122,11 @@ strong {
 }
 
 .sidebar-module-inset.slide-list{
-  background-color: #c5eed9;
+  background-color: #d1ebdd;
+}
+
+.sidebar-module-inset.assignment-list{
+  background-color: #c5e8ee;
 }
 
 .sidebar-module-inset p:last-child,

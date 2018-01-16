@@ -2,6 +2,7 @@
 navbar_brand: Fundamentals of Interactive Design
 menu:
   Home: index.html
+  Assignments: categories/assignments/
   Slides: slides/
   Syllabus: syllabus/
 rss: /atom.xml
@@ -13,6 +14,7 @@ fancybox: false
 # Sidebar
 widgets:
 - slide_list
+- recent_assignments
 - useful_links
 about_widget_content: >
   <p>This is the website for my Fundamentals of Interactive Design at Seminole State College in Heathrow Florida.</p>

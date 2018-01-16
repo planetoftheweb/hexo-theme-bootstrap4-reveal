@@ -24,7 +24,7 @@
   
           <% if ( (post.path.lastIndexOf('slides/', 0) === 0) && (!post.title) && (post.path!=="slides/slides.html")){ %>
           <li>
-            <a href="<%- url_for(post.path) %>"><i class="fas fa-file-alt"></i> <%= post.path.replace('slides/', '').replace('.html', '').replace(/_/g, ' ').replace(/\d.[ab]?\s/g, ' ').replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) || '(no title)' %></a> | <a href="<%= 'slides.html?d=' + post.path.replace('slides/','').replace('.html', '') %>"><i class="fab fa-slideshare"></i> launch slideshow</a>
+            <a href="<%- url_for(post.path) %>"><i class="fas fa-file-alt"></i> <%= post.path.replace('slides/', '').replace('.html', '').replace(/_/g, ' ').replace(/\d.[ab]?\s/g, ' ').replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) || '(no title)' %></a> | <a href="<%= 'slides.html?d=' + post.path.replace('slides/','').replace('.html', '') + '&'  %>"><i class="fab fa-slideshare"></i> launch slideshow</a>
           </li>
           <% } %>
         <% }) %>

@@ -1,0 +1,19 @@
+  <% site.categories.each(function(category){ %> 
+
+    <% if (category.name == 'assignments'){ %>
+
+      <div class="sidebar-module sidebar-module-inset assignment-list">
+      
+      <h4><%- titlecase(category.name) %></h4>
+      <%- list_posts({
+        count:5,
+        orderby: "date",
+        class: "sidebar-module-list",
+        order:-1,
+        query:{categories: 'assignment'}
+      }) %>
+    </div>
+    <% } %>
+  <% }) %>
+
+
