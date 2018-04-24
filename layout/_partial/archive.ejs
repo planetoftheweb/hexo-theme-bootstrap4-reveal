@@ -5,6 +5,7 @@
 <% } else { %>
   <% var last; %>
   <% page.posts.each(function(post, i){ %>
+    <% var category = post.categories; %>
     <% var year = post.date.year(); %>
     <% if (last != year){ %>
       <% if (last != null){ %>
@@ -13,7 +14,7 @@
       <% last = year; %>
       <section class="archives-wrap">
         <div class="archive-year-wrap">
-          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"></a>
         </div>
         <div class="archives">
     <% } %>

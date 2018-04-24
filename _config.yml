@@ -16,6 +16,7 @@ widgets:
 - slide_list
 - recent_assignments
 - useful_links
+
 about_widget_content: >
   <p>This is the website for my Fundamentals of Interactive Design at Seminole State College in Heathrow Florida.</p>
 

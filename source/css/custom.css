@@ -52,8 +52,8 @@ strong {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
-  padding: .2rem 0;
 }
+
 .navbar-brand {
   font-size: 1.2em;
 }
@@ -119,6 +119,24 @@ strong {
   padding: 15px;
   background-color: #fff2c6;
   border-radius: 4px;
+  line-height: 110%;
+}
+
+
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-module-list {
+  padding-left: 1em;
+  line-height: 120%;
+  list-style: circle;
+}
+
+.sidebar-module-list li {
+  margin-bottom: .5em;
 }
 
 .sidebar-module-inset.slide-list{
@@ -129,27 +147,19 @@ strong {
   background-color: #c5e8ee;
 }
 
-.sidebar-module-inset p:last-child,
-.sidebar-module-inset ul:last-child,
-.sidebar-module-inset ol:last-child {
-  margin-bottom: 0;
-}
-
-.sidebar-module-list {
-  padding-left: 1em;
-  line-height: 105%;
-  list-style: circle;
-}
-
-.sidebar-module-list li {
-  margin-bottom: .5em;
-}
-
 .sidebar-module-list-child {
   margin-top: 1em;
   padding-left: 25px;
 }
 
+.sidebar-module-inset ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-module-inset li {
+  margin-bottom: .5em;
+}
 
 /*
  * Blog posts
@@ -332,6 +342,59 @@ strong {
 .slide-list ul li{
   list-style-position: inside;
   list-style: none;
-  text-indent: -1em;
-  padding-left: 1em;
+}
+
+.sidebar-module-inset li {
+  text-indent: -1.3em;
+  padding-left: 1.5em;
+}
+
+.icon {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  width: 1em;
+  overflow: visible;
+  vertical-align: -.125em;  
+  text-rendering: auto;
+  
+}
+.icon {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  width: 1em;
+  overflow: visible;
+  vertical-align: -.125em;  
+  text-rendering: auto;
+}
+
+.icon-lynda { 
+  background: url('../images/icon-lynda.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-lil {
+  background: url('../images/icon-lil.png') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-mdn {
+  background: url('../images/icon-mdn.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-app {
+  background: url('../images/icon-app.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-pow {
+  background: url('../images/icon-pow.svg') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-lil {
+  background: url('../images/icon-lil.svg') no-repeat center center;
+  background-size: contain;
 }

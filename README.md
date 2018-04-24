@@ -1,4 +1,4 @@
-# hexo-theme-bootstrap-blog
+# hexo-theme-bootstrap4-reveal
 
 A simple [Bootstrap] v4 blog theme for [Hexo].
 
